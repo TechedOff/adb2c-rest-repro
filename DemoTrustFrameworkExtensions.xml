@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TrustFrameworkPolicy 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" 
+  PolicySchemaVersion="0.3.0.0" 
+  TenantId="bgheyvdev.onmicrosoft.com" 
+  PolicyId="B2C_1A_DemoTrustFrameworkExtensions" 
+  PublicPolicyUri="http://bgheyvdev.onmicrosoft.com/B2C_1A_DemoTrustFrameworkExtensions">
+  
+  <BasePolicy>
+    <TenantId>bgheyvdev.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_DemoTrustFrameworkBase</PolicyId>
+  </BasePolicy>
+
+  <BuildingBlocks>
+  </BuildingBlocks>
+
+  <ClaimsProviders>
+    <ClaimsProvider>
+      <DisplayName>Local Account SignIn</DisplayName>
+      <TechnicalProfiles>
+         <TechnicalProfile Id="login-NonInteractive">
+          <Metadata>
+            <Item Key="client_id">2e56e077-e607-4252-ab39-78d9c200048a</Item>
+            <Item Key="IdTokenAudience">f4c6457b-a6ab-4c7a-af86-ea245a0e44af</Item>
+          </Metadata>
+          <InputClaims>
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="2e56e077-e607-4252-ab39-78d9c200048a" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="f4c6457b-a6ab-4c7a-af86-ea245a0e44af" />
+          </InputClaims>
+        </TechnicalProfile>
+      </TechnicalProfiles>
+    </ClaimsProvider>
+  </ClaimsProviders>
+
+</TrustFrameworkPolicy>
