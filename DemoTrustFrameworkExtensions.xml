@@ -26,8 +26,8 @@
             <Item Key="IdTokenAudience">f4c6457b-a6ab-4c7a-af86-ea245a0e44af</Item>
           </Metadata>
           <InputClaims>
-            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="2e56e077-e607-4252-ab39-78d9c200048a" />
-            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="f4c6457b-a6ab-4c7a-af86-ea245a0e44af" />
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="2e56e077-e607-4252-ab39-78d9c200048a" AlwaysUseDefaultValue="true" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="f4c6457b-a6ab-4c7a-af86-ea245a0e44af" AlwaysUseDefaultValue="true" />
           </InputClaims>
         </TechnicalProfile>
       </TechnicalProfiles>

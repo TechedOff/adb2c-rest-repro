@@ -47,8 +47,8 @@
             <Key Id="BasicAuthenticationPassword" StorageReferenceId="B2C_1A_SecureRESTClientSecret" />
           </CryptographicKeys>
           <InputClaims>
-            <InputClaim ClaimTypeReferenceId="grant_type" DefaultValue="client_credentials" />
-            <InputClaim ClaimTypeReferenceId="scope" DefaultValue="https://bgheyvdev.onmicrosoft.com/auth-manager-api/.default" />
+            <InputClaim ClaimTypeReferenceId="grant_type" DefaultValue="client_credentials" AlwaysUseDefaultValue="true" />
+            <InputClaim ClaimTypeReferenceId="scope" DefaultValue="https://bgheyvdev.onmicrosoft.com/auth-manager-api/.default" AlwaysUseDefaultValue="true" />
           </InputClaims>
           <OutputClaims>
             <OutputClaim ClaimTypeReferenceId="bearerToken" PartnerClaimType="access_token" />
@@ -101,7 +101,7 @@
         <OutputClaim ClaimTypeReferenceId="givenName" />
         <OutputClaim ClaimTypeReferenceId="surname" />
         <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub"/>
-        <OutputClaim ClaimTypeReferenceId="tenantId" AlwaysUseDefaultValue="true" DefaultValue="{Policy:TenantObjectId}" />
+        <OutputClaim ClaimTypeReferenceId="tenantId" DefaultValue="{Policy:TenantObjectId}" AlwaysUseDefaultValue="true" />
 
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />

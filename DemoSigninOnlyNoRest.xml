@@ -49,7 +49,7 @@
         <OutputClaim ClaimTypeReferenceId="givenName" />
         <OutputClaim ClaimTypeReferenceId="surname" />
         <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub"/>
-        <OutputClaim ClaimTypeReferenceId="tenantId" AlwaysUseDefaultValue="true" DefaultValue="{Policy:TenantObjectId}" />
+        <OutputClaim ClaimTypeReferenceId="tenantId" DefaultValue="{Policy:TenantObjectId}" AlwaysUseDefaultValue="true" />
 
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />
